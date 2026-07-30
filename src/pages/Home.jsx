@@ -20,6 +20,9 @@ export default function Home() {
         image={homeBanner.image}
       />
       <AboutPreview />
+      <section className="overflow-hidden py-4" aria-hidden="true">
+        <div className="ph-oversized-word">Health Hub</div>
+      </section>
       <ServicesSection />
       <WhyChooseUsSection />
       <StatsSection />

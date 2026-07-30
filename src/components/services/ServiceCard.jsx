@@ -9,8 +9,12 @@ import FadeUp from '../common/FadeUp';
 export default function ServiceCard({ service, delay = 0 }) {
   return (
     <FadeUp delay={delay} className="ph-card h-full flex flex-col">
-      <div className="ph-img-hover relative" style={{ height: 150 }}>
+      <div className="ph-img-hover relative" style={{ height: 168 }}>
         <img src={service.cardImage} alt={service.title} className="w-full h-full object-cover" loading="lazy" />
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(180deg, rgba(0,165,176,0.05) 0%, rgba(14,46,51,0.35) 100%)' }}
+        />
         {service.icon && (
           <span className="ph-card-icon absolute left-5 bottom-0 translate-y-1/2 shadow-ph-sm">
             <i className={`bi ${service.icon}`} />

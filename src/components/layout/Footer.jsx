@@ -19,8 +19,9 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="ph-footer pt-16 pb-8">
-      <div className="container">
+    <footer className="ph-footer pt-16 pb-0">
+      <span className="ph-footer-watermark" aria-hidden="true">{siteName.toLowerCase()}</span>
+      <div className="container relative z-10 pb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-8">
           <div className="lg:col-span-4">
             <BrandLogo light className="mb-3" />
@@ -84,6 +85,8 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} {siteName}. All rights reserved.
         </p>
       </div>
+      {/* space below the content where the oversized watermark shows */}
+      <div className="ph-footer-wm-band" aria-hidden="true" />
     </footer>
   );
 }

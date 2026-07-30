@@ -1,6 +1,7 @@
 import Seo from '../components/common/Seo';
 import FadeUp from '../components/common/FadeUp';
 import SectionHeading from '../components/common/SectionHeading';
+import PageHero from '../components/common/PageHero';
 import WhyChooseCard from '../components/whyChooseUs/WhyChooseCard';
 import CtaBanner from '../components/common/CtaBanner';
 import whyChooseUs from '../data/whyChooseUs';
@@ -14,17 +15,12 @@ export default function About() {
         description="Learn about our mission, vision, and the values that guide the care we provide."
       />
 
-      <section
-        className="ph-hero"
-        style={{ minHeight: '40vh', backgroundImage: `url('${aboutPage.heroImage}')` }}
-      >
-        <div className="container text-center">
-          <span className="section-eyebrow" style={{ background: 'rgba(255,255,255,.15)', color: '#fff' }}>
-            About Us
-          </span>
-          <h1 className="mb-0">Dedicated to Your Health, Every Step of the Way</h1>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="About Us"
+        title="Dedicated to Your Health, Every Step of the Way"
+        image={aboutPage.heroImage}
+        minHeight={360}
+      />
 
       {/* Introduction */}
       <section className="section-py">
@@ -96,10 +92,12 @@ export default function About() {
       <section className="section-py bg-ph-alt">
         <div className="container">
           <SectionHeading eyebrow="Why Choose Us" title="What Sets Us Apart" />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {whyChooseUs.map((item, i) => (
-              <WhyChooseCard key={item.id} item={item} delay={i * 0.08} />
-            ))}
+          <div className="ph-feature-strip">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+              {whyChooseUs.map((item, i) => (
+                <WhyChooseCard key={item.id} item={item} delay={i * 0.08} />
+              ))}
+            </div>
           </div>
         </div>
       </section>

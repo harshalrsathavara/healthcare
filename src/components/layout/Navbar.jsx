@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import BrandLogo from '../common/BrandLogo';
 import useScrollNavbar from '../../hooks/useScrollNavbar';
+import { footerContent } from '../../data/siteContent';
 
 const navItems = [
   { label: 'Home', to: '/', end: true },
@@ -17,15 +18,49 @@ export default function Navbar() {
   const { pathname } = useLocation();
 
   const isServicesActive = pathname.startsWith('/services');
+  const linkClass = ({ isActive }, to) =>
+    `nav-link block py-2 lg:py-0 ${(to === '/services' ? isServicesActive : isActive) ? 'active' : ''}`;
 
   return (
     <nav ref={navbarRef} className={`ph-navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
-        <div className="flex items-center justify-between">
-          <Link to="/" className="navbar-brand" onClick={() => setOpen(false)}>
+        <div className="flex items-center justify-between gap-4">
+          <Link to="/" className="navbar-brand shrink-0" onClick={() => setOpen(false)}>
             <BrandLogo />
           </Link>
 
+          {/* Desktop: centered nav */}
+          <ul className="hidden lg:flex flex-1 justify-center items-center list-none m-0 p-0">
+            {navItems.map((item) => (
+              <li key={item.to}>
+                <NavLink to={item.to} end={item.end} className={(s) => linkClass(s, item.to)}>
+                  {item.label}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+
+          {/* Desktop: phone + CTA */}
+          <div className="hidden lg:flex items-center gap-5 shrink-0">
+            <a href={`tel:${footerContent.phoneHref}`} className="group flex items-center gap-3">
+              <span className="w-11 h-11 rounded-full flex items-center justify-center bg-ph-primary/10 text-ph-primary group-hover:bg-ph-primary group-hover:text-white transition-colors">
+                <i className="bi bi-telephone-fill text-lg" />
+              </span>
+              <span className="flex flex-col leading-tight">
+                <span className="text-[0.68rem] uppercase tracking-wider" style={{ color: 'var(--ph-muted)' }}>
+                  Call us anytime
+                </span>
+                <span className="font-semibold group-hover:text-ph-primary transition-colors" style={{ color: 'var(--ph-dark)' }}>
+                  {footerContent.phone}
+                </span>
+              </span>
+            </a>
+            <Link to="/contact-us" className="btn btn-ph-primary btn-sm btn-pulse">
+              <i className="bi bi-calendar2-check" /> Book Appointment
+            </Link>
+          </div>
+
+          {/* Mobile toggler */}
           <button
             type="button"
             className="navbar-toggler lg:hidden"
@@ -39,33 +74,38 @@ export default function Navbar() {
               <span className="navbar-toggler-icon-bar block h-[2px] w-full rounded" />
             </span>
           </button>
+        </div>
 
-          <div className={`navbar-collapse ${open ? 'block' : 'hidden'} lg:!block absolute lg:static left-0 right-0 top-full lg:top-auto mx-3 lg:mx-0`}>
-            <ul className="flex flex-col lg:flex-row lg:items-center gap-1 lg:gap-0 list-none m-0 p-0">
+        {/* Mobile dropdown */}
+        {open && (
+          <div className="navbar-collapse lg:hidden mt-3">
+            <ul className="flex flex-col gap-1 list-none m-0 p-0">
               {navItems.map((item) => (
                 <li key={item.to}>
                   <NavLink
                     to={item.to}
                     end={item.end}
                     onClick={() => setOpen(false)}
-                    className={({ isActive }) =>
-                      `nav-link block py-2 lg:py-0 ${
-                        (item.to === '/services' ? isServicesActive : isActive) ? 'active' : ''
-                      }`
-                    }
+                    className={(s) => linkClass(s, item.to)}
                   >
                     {item.label}
                   </NavLink>
                 </li>
               ))}
-              <li className="lg:ml-2 mt-2 lg:mt-0">
-                <Link to="/contact-us" onClick={() => setOpen(false)} className="btn btn-ph-primary btn-sm btn-pulse inline-block">
-                  Book Appointment
-                </Link>
-              </li>
             </ul>
+            <div className="flex flex-col gap-3 mt-3">
+              <a href={`tel:${footerContent.phoneHref}`} className="flex items-center gap-3">
+                <span className="w-10 h-10 rounded-full flex items-center justify-center bg-ph-primary/10 text-ph-primary">
+                  <i className="bi bi-telephone-fill" />
+                </span>
+                <span className="font-semibold" style={{ color: 'var(--ph-dark)' }}>{footerContent.phone}</span>
+              </a>
+              <Link to="/contact-us" onClick={() => setOpen(false)} className="btn btn-ph-primary btn-sm w-full">
+                <i className="bi bi-calendar2-check" /> Book Appointment
+              </Link>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </nav>
   );

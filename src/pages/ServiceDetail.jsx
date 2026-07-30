@@ -2,6 +2,7 @@ import { Link, Navigate, useParams } from 'react-router-dom';
 import Seo from '../components/common/Seo';
 import FadeUp from '../components/common/FadeUp';
 import SectionHeading from '../components/common/SectionHeading';
+import PageHero from '../components/common/PageHero';
 import ProcessFlow from '../components/services/ProcessFlow';
 import CtaBanner from '../components/common/CtaBanner';
 import services, { processFlows } from '../data/services';
@@ -23,20 +24,14 @@ export default function ServiceDetail() {
     <>
       <Seo title={service.title} description={service.tagline} image={service.bannerImage} />
 
-      <section className="ph-hero" style={{ minHeight: '52vh', backgroundImage: `url('${heroImage}')` }}>
-        <div className="container text-center">
-          <span className="section-eyebrow" style={{ background: 'rgba(255,255,255,.15)', color: '#fff' }}>
-            Services
-          </span>
-          <h1 className="mb-3">{service.title}</h1>
-          <p className="text-lg mx-auto mb-6" style={{ color: 'rgba(255,255,255,.88)', maxWidth: 640 }}>
-            {service.tagline}
-          </p>
-          <Link to="/contact-us" className="btn btn-ph-primary btn-lg inline-block">
-            Connect With Us
-          </Link>
-        </div>
-      </section>
+      <PageHero eyebrow="Services" title={service.title} image={heroImage} minHeight={420}>
+        <p className="text-lg mx-auto mt-4 mb-6" style={{ color: 'rgba(255,255,255,.88)', maxWidth: 640 }}>
+          {service.tagline}
+        </p>
+        <Link to="/contact-us" className="btn btn-ph-primary btn-lg">
+          Connect With Us
+        </Link>
+      </PageHero>
 
       {/* Overview */}
       <section className="section-py">

@@ -1,5 +1,6 @@
 import Seo from '../components/common/Seo';
 import FadeUp from '../components/common/FadeUp';
+import PageHero from '../components/common/PageHero';
 import InquiryForm from '../components/contact/InquiryForm';
 import { contactPage } from '../data/siteContent';
 
@@ -47,17 +48,7 @@ export default function Contact() {
         description="Get in touch with our care team — find our location, hours, and send us a message."
       />
 
-      <section
-        className="ph-hero"
-        style={{ minHeight: '40vh', backgroundImage: `url('${contactPage.heroImage}')` }}
-      >
-        <div className="container text-center">
-          <span className="section-eyebrow" style={{ background: 'rgba(255,255,255,.15)', color: '#fff' }}>
-            Contact Us
-          </span>
-          <h1 className="mb-0">We're Here to Help</h1>
-        </div>
-      </section>
+      <PageHero eyebrow="Contact Us" title="We're Here to Help" image={contactPage.heroImage} minHeight={360} />
 
       <section className="section-py">
         <div className="container">

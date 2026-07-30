@@ -45,11 +45,11 @@ export default function StatItem({ stat, delay = 0 }) {
 
   return (
     <div ref={wrapRef} className="text-center">
-      <div className="ph-stat-number text-white">
+      <div className="ph-stat-number">
         <span ref={counterRef}>0</span>
         {stat.suffix}
       </div>
-      <div className="text-sm mt-1" style={{ color: 'rgba(255,255,255,.8)' }}>
+      <div className="text-base font-semibold mt-2" style={{ color: 'var(--ph-primary)' }}>
         {stat.label}
       </div>
     </div>

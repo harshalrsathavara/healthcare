@@ -1,17 +1,24 @@
 import SectionHeading from '../common/SectionHeading';
-import TestimonialCarousel from '../testimonials/TestimonialCarousel';
+import FadeUp from '../common/FadeUp';
+import TestimonialCard from '../testimonials/TestimonialCard';
 import testimonials from '../../data/testimonials';
 
 export default function TestimonialsSection() {
   return (
-    <section className="section-py bg-ph-alt">
+    <section className="section-py ph-tint">
       <div className="container">
         <SectionHeading
-          eyebrow="Patient Stories"
-          title="What Our Patients Say"
-          subtitle="Real experiences from the people we've had the privilege to care for."
+          eyebrow="Client Voices"
+          title="What our partners say"
+          subtitle="Real experiences from the provider organizations we support across the revenue cycle."
         />
-        <TestimonialCarousel testimonials={testimonials} />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {testimonials.map((t, i) => (
+            <FadeUp key={t.id} delay={i * 0.08} className="h-full">
+              <TestimonialCard testimonial={t} />
+            </FadeUp>
+          ))}
+        </div>
       </div>
     </section>
   );
