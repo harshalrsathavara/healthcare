@@ -2,11 +2,9 @@ import { Link } from 'react-router-dom';
 import Seo from '../components/common/Seo';
 import FadeUp from '../components/common/FadeUp';
 import SectionHeading from '../components/common/SectionHeading';
-import PageHero from '../components/common/PageHero';
 import ServiceCard from '../components/services/ServiceCard';
 import CtaBanner from '../components/common/CtaBanner';
 import services from '../data/services';
-import { servicesIndexHero } from '../data/siteContent';
 
 export default function Services() {
   const standard = services.filter((s) => s.type === 'standard');
@@ -19,26 +17,26 @@ export default function Services() {
         description="End-to-end revenue cycle management, medical billing, HIM, patient access, and healthcare IT services for hospitals and provider organizations."
       />
 
-      <PageHero
-        eyebrow="Our Services"
-        title="Revenue Cycle & Health IT Services That Perform"
-        image={servicesIndexHero.image}
-        minHeight={360}
-      />
-
-      {/* Standard service categories — compact cards */}
-      <section className="section-py">
+      {/* Text-only page header */}
+      <section className="pt-6">
         <div className="container">
-          <SectionHeading
-            eyebrow="What We Offer"
-            title="Core Service Lines"
-            subtitle="Specialized teams across the revenue cycle and health IT — engaged individually or as a fully managed partnership."
-          />
+          <div className="ph-text-hero">
+            <span className="ph-text-hero__glow ph-text-hero__glow--a" aria-hidden="true" />
+            <span className="ph-text-hero__glow ph-text-hero__glow--b" aria-hidden="true" />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {standard.map((service, i) => (
-              <ServiceCard key={service.id} service={service} delay={i * 0.08} />
-            ))}
+            <FadeUp className="relative text-center mx-auto" style={{ maxWidth: 820 }}>
+              <span className="ph-pill-eyebrow">
+                <i className="bi bi-clipboard2-pulse" /> Our Services
+              </span>
+              <h1 className="ph-text-hero__title">
+                Delivering quality health services{' '}
+                <span className="ph-text-hero__accent">to advance patient health</span>
+              </h1>
+              <p className="ph-text-hero__sub">
+                End-to-end revenue cycle, medical billing, HIM, patient access, and healthcare IT —
+                specialized teams that protect revenue and reduce cost-to-collect.
+              </p>
+            </FadeUp>
           </div>
         </div>
       </section>
@@ -95,13 +93,16 @@ export default function Services() {
                       <ul className="list-none p-0 m-0 grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 mb-7">
                         {service.servicesProvided.bullets.slice(0, 6).map((b) => (
                           <li key={b} className="flex items-start gap-2 text-sm">
-                            <i className="bi bi-check-circle-fill text-ph-secondary mt-1" />
-                            <span>{b}</span>
+                            <i
+                              className="bi bi-check-circle-fill shrink-0"
+                              style={{ color: '#000000', fontSize: '1rem', lineHeight: '1.5rem' }}
+                            />
+                            <span style={{ lineHeight: '1.5rem' }}>{b}</span>
                           </li>
                         ))}
                       </ul>
                       <div>
-                        <Link to={`/services/${service.slug}`} className="btn btn-ph-primary ph-service-link">
+                        <Link to={`/services/${service.slug}`} className="btn btn-ph-outline ph-service-link">
                           Explore {service.title} <i className="bi bi-arrow-right" />
                         </Link>
                       </div>
@@ -110,6 +111,23 @@ export default function Services() {
                 </FadeUp>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Standard service categories — compact cards */}
+      <section className="section-py">
+        <div className="container">
+          <SectionHeading
+            eyebrow="What We Offer"
+            title="Core Service Lines"
+            subtitle="Specialized teams across the revenue cycle and health IT — engaged individually or as a fully managed partnership."
+          />
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {standard.map((service, i) => (
+              <ServiceCard key={service.id} service={service} index={i} delay={i * 0.08} />
+            ))}
           </div>
         </div>
       </section>

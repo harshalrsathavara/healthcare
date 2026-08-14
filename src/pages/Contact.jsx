@@ -1,6 +1,5 @@
 import Seo from '../components/common/Seo';
 import FadeUp from '../components/common/FadeUp';
-import PageHero from '../components/common/PageHero';
 import InquiryForm from '../components/contact/InquiryForm';
 import { contactPage } from '../data/siteContent';
 
@@ -48,7 +47,28 @@ export default function Contact() {
         description="Get in touch with our care team — find our location, hours, and send us a message."
       />
 
-      <PageHero eyebrow="Contact Us" title="We're Here to Help" image={contactPage.heroImage} minHeight={360} />
+      {/* Text-only page header */}
+      <section className="pt-6">
+        <div className="container">
+          <div className="ph-text-hero">
+            <span className="ph-text-hero__glow ph-text-hero__glow--a" aria-hidden="true" />
+            <span className="ph-text-hero__glow ph-text-hero__glow--b" aria-hidden="true" />
+
+            <FadeUp className="relative text-center mx-auto" style={{ maxWidth: 760 }}>
+              <span className="ph-pill-eyebrow">
+                <i className="bi bi-chat-dots" /> Contact Us
+              </span>
+              <h1 className="ph-text-hero__title">
+                We're Here to <span className="ph-text-hero__accent">Help</span>
+              </h1>
+              <p className="ph-text-hero__sub">
+                Reach out to our team — we'll help you find the right care or answer any questions
+                about our services.
+              </p>
+            </FadeUp>
+          </div>
+        </div>
+      </section>
 
       <section className="section-py">
         <div className="container">

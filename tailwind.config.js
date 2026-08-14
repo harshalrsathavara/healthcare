@@ -28,7 +28,7 @@ module.exports = {
         ph: {
           primary: '#00a5b0',
           'primary-dark': '#017a83',
-          'primary-light': '#4cc3cc',
+          'primary-light': 'rgba(46, 118, 123, 1)',
           secondary: '#0a8f99',
           'secondary-dark': '#067077',
           accent: '#fe9507',

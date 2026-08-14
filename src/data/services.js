@@ -11,7 +11,7 @@
 // Imagery uses curated Unsplash URLs relevant to B2B healthcare (clinical
 // staff, health IT/data, billing & admin), consistent with siteContent.js.
 
-const IMG = (id) => `https://images.unsplash.com/photo-${id}?q=80&w=1200&auto=format&fit=crop`;
+const IMG = (id) => `/images/lib/photo-${id}.jpg`;
 
 const services = [
   {
@@ -24,7 +24,7 @@ const services = [
       'Clean front-end registration, eligibility, and authorization that stop denials before they start.',
     cardImage: IMG('1576091160399-112ba8d25d1d'),
     bannerImage: IMG('1538108149393-fbbd81895907'),
-    overviewImage: IMG('1576091160399-112ba8d25d1d'),
+    overviewImage: IMG('1516549655169-df83a0774514'),
     provideImage: IMG('1516549655169-df83a0774514'),
     overview: {
       paragraphs: [
@@ -100,7 +100,7 @@ const services = [
       'Health IT support, integration, and security that keep clinical and revenue systems running and compliant.',
     cardImage: IMG('1551288049-bebda4e38f71'),
     bannerImage: IMG('1526628953301-3e589a6a8b74'),
-    overviewImage: IMG('1551288049-bebda4e38f71'),
+    overviewImage: IMG('1526628953301-3e589a6a8b74'),
     provideImage: IMG('1460925895917-afdab827c52f'),
     overview: {
       paragraphs: [
@@ -138,7 +138,7 @@ const services = [
       'Claims, A/R, and denial management that accelerate cash and reduce cost-to-collect.',
     cardImage: IMG('1554224155-6726b3ff858f'),
     bannerImage: IMG('1576091160550-2173dba999ef'),
-    overviewImage: IMG('1554224155-6726b3ff858f'),
+    overviewImage: IMG('1551076805-e1869033e561'),
     provideImage: IMG('1554224155-6726b3ff858f'),
     overview: {
       paragraphs: [
@@ -204,7 +204,6 @@ const services = [
         'Payer follow-up and denial resolution',
         'Payment posting and reconciliation',
         'Patient statements and collections',
-        'Revenue integrity and performance reporting',
       ],
     },
   },

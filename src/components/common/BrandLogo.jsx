@@ -7,7 +7,7 @@ import { siteName } from '../../data/siteContent';
 export default function BrandLogo({ className = '' }) {
   return (
     <span className={`inline-flex items-center ${className}`}>
-      <img src="/images/logo-emblem.png" alt={siteName} className="h-12 w-auto" />
+      <img src="/images/fid_logo.png" alt={siteName} className="h-12 w-auto" />
     </span>
   );
 }

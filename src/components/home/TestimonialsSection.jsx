@@ -5,7 +5,7 @@ import testimonials from '../../data/testimonials';
 
 export default function TestimonialsSection() {
   return (
-    <section className="section-py ph-tint">
+    <section className="section-py bg-ph-alt">
       <div className="container">
         <SectionHeading
           eyebrow="Client Voices"

@@ -1,17 +1,17 @@
 import FadeUp from '../common/FadeUp';
 
 /**
- * A single cell in the bordered feature strip (theme value-row pattern):
- * thin line icon, title, description. Meant to sit inside `.ph-feature-strip`.
+ * Standalone "why choose us" card: an icon tile that fills on hover, a title,
+ * and a short description. Sits in a gapped grid (no shared border strip).
  */
 export default function WhyChooseCard({ item, delay = 0 }) {
   return (
-    <FadeUp delay={delay} className="ph-feature-cell">
-      <div className="ph-line-icon mb-4">
+    <FadeUp delay={delay} className="ph-why-card h-full">
+      <span className="ph-why-card__icon">
         <i className={`bi ${item.icon}`} />
-      </div>
-      <h3 className="text-lg mb-2">{item.title}</h3>
-      <p className="text-sm mb-0" style={{ color: 'var(--ph-muted)' }}>
+      </span>
+      <h3 className="text-lg mt-5 mb-2">{item.title}</h3>
+      <p className="text-sm mb-0" style={{ color: 'var(--ph-muted)', lineHeight: 1.6 }}>
         {item.description}
       </p>
     </FadeUp>

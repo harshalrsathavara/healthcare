@@ -30,7 +30,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop: centered nav */}
-          <ul className="hidden lg:flex flex-1 justify-center items-center list-none m-0 p-0">
+          <ul className="hidden lg:flex items-center justify-end ml-auto gap-4 list-none m-0 p-0">
             {navItems.map((item) => (
               <li key={item.to}>
                 <NavLink to={item.to} end={item.end} className={(s) => linkClass(s, item.to)}>
@@ -43,21 +43,21 @@ export default function Navbar() {
           {/* Desktop: phone + CTA */}
           <div className="hidden lg:flex items-center gap-5 shrink-0">
             <a href={`tel:${footerContent.phoneHref}`} className="group flex items-center gap-3">
-              <span className="w-11 h-11 rounded-full flex items-center justify-center bg-ph-primary/10 text-ph-primary group-hover:bg-ph-primary group-hover:text-white transition-colors">
+              {/* <span className="w-11 h-11 rounded-full flex items-center justify-center bg-ph-primary/10 text-ph-primary group-hover:bg-ph-primary group-hover:text-white transition-colors">
                 <i className="bi bi-telephone-fill text-lg" />
-              </span>
-              <span className="flex flex-col leading-tight">
-                <span className="text-[0.68rem] uppercase tracking-wider" style={{ color: 'var(--ph-muted)' }}>
+              </span> */}
+              {/* <span className="flex flex-col leading-tight"> */}
+              {/* <span className="text-[0.68rem] uppercase tracking-wider" style={{ color: 'var(--ph-muted)' }}>
                   Call us anytime
-                </span>
-                <span className="font-semibold group-hover:text-ph-primary transition-colors" style={{ color: 'var(--ph-dark)' }}>
+                </span> */}
+              {/* <span className="font-semibold group-hover:text-ph-primary transition-colors" style={{ color: 'var(--ph-dark)' }}>
                   {footerContent.phone}
-                </span>
-              </span>
+                </span> */}
+              {/* </span> */}
             </a>
-            <Link to="/contact-us" className="btn btn-ph-primary btn-sm btn-pulse">
+            {/* <Link to="/contact-us" className="btn btn-ph-primary btn-sm btn-pulse">
               <i className="bi bi-calendar2-check" /> Book Appointment
-            </Link>
+            </Link> */}
           </div>
 
           {/* Mobile toggler */}

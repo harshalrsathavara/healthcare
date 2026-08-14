@@ -5,7 +5,7 @@ export const homeBanner = {
   subheading: 'Modern medicine, a warm touch, and a team dedicated to your wellbeing at every stage of life.',
   ctaText: 'Book an Appointment',
   ctaLink: '/contact-us',
-  image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1600&auto=format&fit=crop',
+  image: '/images/banners/home-hero.png',
 };
 
 export const aboutPreview = {
@@ -15,13 +15,13 @@ export const aboutPreview = {
     'We combine advanced medical expertise with genuine, personal care. Our multidisciplinary team works together to deliver accurate diagnoses, effective treatments, and an experience that puts you first.',
   ctaText: 'Read More',
   ctaLink: '/about-us',
-  image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=1200&auto=format&fit=crop',
+  image: '/images/lib/photo-1584515933487-779824d29309.jpg',
 };
 
 export const aboutPage = {
-  heroImage: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?q=80&w=1600&auto=format&fit=crop',
-  introImage: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop',
-  philosophyImage: 'https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?q=80&w=1200&auto=format&fit=crop',
+  heroImage: '/images/lib/photo-1538108149393-fbbd81895907.jpg',
+  introImage: '/images/lib/photo-1504813184591-01572f98c85f.jpg',
+  philosophyImage: '/images/lib/photo-1576091160550-2173dba999ef.jpg',
   mission: {
     icon: 'bi-bullseye',
     title: 'Our Mission',
@@ -40,14 +40,14 @@ export const aboutPage = {
 };
 
 export const servicesIndexHero = {
-  image: 'https://images.unsplash.com/photo-1504813184591-01572f98c85f?q=80&w=1600&auto=format&fit=crop',
+  image: '/images/lib/photo-1504813184591-01572f98c85f.jpg',
 };
 
 export const serviceDetailFallbackImage =
-  'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1600&auto=format&fit=crop';
+  '/images/lib/photo-1519494026892-80bbd2d6fd0d.jpg';
 
 export const contactPage = {
-  heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop',
+  heroImage: '/images/lib/photo-1576091160550-2173dba999ef.jpg',
   address: ['123 Wellness Ave, Suite 200', 'Springfield, USA'],
   phone: '+1 (123) 456-7890',
   phoneHref: '+11234567890',

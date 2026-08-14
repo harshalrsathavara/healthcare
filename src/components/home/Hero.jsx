@@ -57,14 +57,14 @@ export default function Hero({ heading, subheading, ctaText, ctaLink, image }) {
                 </p>
               )}
               <div ref={ctaRef} className="flex flex-wrap gap-3">
-                {ctaText && ctaLink && (
+                {/* {ctaText && ctaLink && (
                   <Link to={ctaLink} className="btn btn-ph-primary btn-lg">
                     {ctaText}
                   </Link>
-                )}
-                <Link to="/services" className="btn btn-ph-light btn-lg">
+                )} */}
+                {/* <Link to="/services" className="btn btn-ph-light btn-lg">
                   Our Services
-                </Link>
+                </Link> */}
               </div>
             </div>
 
@@ -73,7 +73,7 @@ export default function Hero({ heading, subheading, ctaText, ctaLink, image }) {
               ref={statsRef}
               className="mt-10 lg:mt-0 lg:absolute lg:bottom-8 lg:right-8 lg:w-[420px]"
             >
-              <div className="grid grid-cols-2 gap-4">
+              {/* <div className="grid grid-cols-2 gap-4">
                 {stats.map((stat) => (
                   <div key={stat.id} className="bg-white rounded-ph shadow-ph p-5">
                     <div
@@ -87,8 +87,8 @@ export default function Hero({ heading, subheading, ctaText, ctaLink, image }) {
                       {stat.label}
                     </div>
                   </div>
-                ))}
-              </div>
+                ))} */}
+              {/* </div> */}
             </div>
           </div>
         </div>

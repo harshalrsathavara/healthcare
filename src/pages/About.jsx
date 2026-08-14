@@ -1,7 +1,6 @@
 import Seo from '../components/common/Seo';
 import FadeUp from '../components/common/FadeUp';
 import SectionHeading from '../components/common/SectionHeading';
-import PageHero from '../components/common/PageHero';
 import WhyChooseCard from '../components/whyChooseUs/WhyChooseCard';
 import CtaBanner from '../components/common/CtaBanner';
 import whyChooseUs from '../data/whyChooseUs';
@@ -15,12 +14,29 @@ export default function About() {
         description="Learn about our mission, vision, and the values that guide the care we provide."
       />
 
-      <PageHero
-        eyebrow="About Us"
-        title="Dedicated to Your Health, Every Step of the Way"
-        image={aboutPage.heroImage}
-        minHeight={360}
-      />
+      {/* Text-only page header */}
+      <section className="pt-6">
+        <div className="container">
+          <div className="ph-text-hero">
+            <span className="ph-text-hero__glow ph-text-hero__glow--a" aria-hidden="true" />
+            <span className="ph-text-hero__glow ph-text-hero__glow--b" aria-hidden="true" />
+
+            <FadeUp className="relative text-center mx-auto" style={{ maxWidth: 780 }}>
+              <span className="ph-pill-eyebrow">
+                <i className="bi bi-heart-pulse" /> About Us
+              </span>
+              <h1 className="ph-text-hero__title">
+                Dedicated to Your Health,{' '}
+                <span className="ph-text-hero__accent">Every Step of the Way</span>
+              </h1>
+              <p className="ph-text-hero__sub">
+                Compassionate, coordinated care built around every patient we serve — combining
+                clinical expertise with a warm, personal touch.
+              </p>
+            </FadeUp>
+          </div>
+        </div>
+      </section>
 
       {/* Introduction */}
       <section className="section-py">
@@ -92,20 +108,18 @@ export default function About() {
       <section className="section-py bg-ph-alt">
         <div className="container">
           <SectionHeading eyebrow="Why Choose Us" title="What Sets Us Apart" />
-          <div className="ph-feature-strip">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-              {whyChooseUs.map((item, i) => (
-                <WhyChooseCard key={item.id} item={item} delay={i * 0.08} />
-              ))}
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {whyChooseUs.map((item, i) => (
+              <WhyChooseCard key={item.id} item={item} delay={i * 0.08} />
+            ))}
           </div>
         </div>
       </section>
 
-      <CtaBanner
+      {/* <CtaBanner
         heading="Have questions about our care philosophy?"
         subheading="We'd love to walk you through how our team can support your health goals."
-      />
+      /> */}
     </>
   );
 }

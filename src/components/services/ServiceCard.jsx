@@ -2,34 +2,32 @@ import { Link } from 'react-router-dom';
 import FadeUp from '../common/FadeUp';
 
 /**
- * Compact service card: a slim image with an overlapping icon badge, then a
- * tight body (title, one-line tagline, "Learn more"). Deliberately smaller
- * than a full media card so a row of categories stays balanced and scannable.
+ * Icon-led service card with an editorial treatment: a colored top accent bar,
+ * a ghosted index number, and a left-aligned icon. No photography — the icon
+ * and structure carry the category, keeping a row of services clean and sharp.
  */
-export default function ServiceCard({ service, delay = 0 }) {
+export default function ServiceCard({ service, index = 0, delay = 0 }) {
   return (
-    <FadeUp delay={delay} className="ph-card h-full flex flex-col">
-      <div className="ph-img-hover relative" style={{ height: 168 }}>
-        <img src={service.cardImage} alt={service.title} className="w-full h-full object-cover" loading="lazy" />
-        <div
-          className="absolute inset-0"
-          style={{ background: 'linear-gradient(180deg, rgba(0,165,176,0.05) 0%, rgba(14,46,51,0.35) 100%)' }}
-        />
+    <FadeUp delay={delay} className="ph-service-card h-full flex flex-col">
+      <span className="ph-service-card__bar" aria-hidden="true" />
+      <span className="ph-service-card__num" aria-hidden="true">
+        {String(index + 1).padStart(2, '0')}
+      </span>
+
+      <div className="flex flex-col flex-grow p-5">
         {service.icon && (
-          <span className="ph-card-icon absolute left-5 bottom-0 translate-y-1/2 shadow-ph-sm">
+          <span className="ph-service-card__icon">
             <i className={`bi ${service.icon}`} />
           </span>
         )}
-      </div>
-      <div className="p-5 pt-9 flex flex-col flex-grow">
-        <h3 className="text-base mb-2">{service.title}</h3>
-        <p className="text-sm mb-4 flex-grow" style={{ color: 'var(--ph-muted)' }}>
+        <h3 className="text-base mt-4 mb-2">{service.title}</h3>
+        <p className="mb-4 flex-grow" style={{ color: 'var(--ph-muted)', fontSize: '0.85rem', lineHeight: 1.6 }}>
           {service.tagline}
         </p>
         <Link
           to={`/services/${service.slug}`}
-          className="ph-service-link text-sm font-semibold mt-auto"
-          style={{ color: 'var(--ph-primary)' }}
+          className="ph-service-link font-semibold mt-auto"
+          style={{ color: 'var(--ph-primary)', fontSize: '0.8rem' }}
         >
           Learn More <i className="bi bi-arrow-right" />
         </Link>
