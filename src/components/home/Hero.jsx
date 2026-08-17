@@ -31,22 +31,22 @@ export default function Hero({ heading, subheading, ctaText, ctaLink, image }) {
   }, []);
 
   return (
-    <section className="pt-6">
-      <div className="container">
-        <div className="ph-rounded-media relative bg-ph-primary" style={{ minHeight: 560 }}>
-          {image && (
-            <div
-              ref={parallaxRef}
-              className="absolute inset-0 bg-cover bg-center will-change-transform"
-              style={{ backgroundImage: `url('${image}')`, top: -40, bottom: -40 }}
-            />
-          )}
+    <section>
+      <div className="relative overflow-hidden bg-ph-primary" style={{ minHeight: '100vh' }}>
+        {image && (
           <div
-            className="absolute inset-0"
-            style={{ background: 'linear-gradient(100deg, rgba(4,38,43,0.88) 0%, rgba(5,64,70,0.55) 55%, rgba(8,90,96,0.28) 100%)' }}
+            ref={parallaxRef}
+            className="absolute inset-0 bg-cover bg-center will-change-transform"
+            style={{ backgroundImage: `url('${image}')`, top: -40, bottom: -40 }}
           />
+        )}
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(100deg, rgba(4,38,43,0.88) 0%, rgba(5,64,70,0.55) 55%, rgba(8,90,96,0.28) 100%)' }}
+        />
 
-          <div className="relative px-6 sm:px-10 lg:px-14 py-14 lg:py-20 flex flex-col justify-center" style={{ minHeight: 560 }}>
+        <div className="container relative">
+          <div className="px-2 sm:px-4 lg:px-6 py-14 lg:py-20 flex flex-col justify-center" style={{ minHeight: '100vh' }}>
             <div className="max-w-2xl">
               <h1 ref={headingRef} className="text-white mb-4" style={{ fontSize: 'clamp(1.9rem, 6vw, 4rem)', fontWeight: 800 }}>
                 {heading}

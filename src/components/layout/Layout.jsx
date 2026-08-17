@@ -35,7 +35,7 @@ export default function Layout() {
     <>
       <ScrollProgress />
       <Navbar />
-      <main>
+      <main className={pathname === '/' ? 'main-home' : ''}>
         <Outlet />
       </main>
       <Footer />

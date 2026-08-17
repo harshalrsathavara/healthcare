@@ -59,9 +59,18 @@ main {
   padding-top: 84px;
 }
 
+/* Home page: the dark banner sits under the transparent header (no offset). */
+main.main-home {
+  padding-top: 0;
+}
+
 @media (max-width: 991.98px) {
   main {
     padding-top: 76px;
+  }
+
+  main.main-home {
+    padding-top: 0;
   }
 }
 
@@ -717,13 +726,19 @@ img {
   /* Navbar ------------------------------------------------------------------*/
   /* MD theme header: solid white, sticky, always. */
   .ph-navbar {
-    transition: padding 0.35s ease, box-shadow 0.35s ease;
+    transition: padding 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
     padding: 1rem 0;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1030;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  /* Solid state: over-hero transparency ends (home) / all inner pages. */
+  .ph-navbar.solid {
     background: #ffffff;
     box-shadow: var(--ph-shadow-sm);
   }
@@ -734,10 +749,14 @@ img {
 
   .ph-navbar .nav-link {
     font-weight: 600;
-    color: var(--ph-dark);
+    color: #ffffff;
     margin: 0 0.9rem;
     position: relative;
     transition: color 0.3s ease;
+  }
+
+  .ph-navbar.solid .nav-link {
+    color: var(--ph-dark);
   }
 
   .ph-navbar .nav-link.active,
@@ -796,6 +815,11 @@ img {
   }
 
   .ph-navbar .navbar-toggler-icon-bar {
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+  }
+
+  .ph-navbar.solid .navbar-toggler-icon-bar {
     background-color: var(--ph-primary);
   }
 

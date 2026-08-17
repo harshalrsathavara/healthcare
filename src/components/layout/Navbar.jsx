@@ -18,15 +18,19 @@ export default function Navbar() {
   const { pathname } = useLocation();
 
   const isServicesActive = pathname.startsWith('/services');
+  const isHome = pathname === '/';
+  // Transparent only while resting over the home banner; solid everywhere else,
+  // once scrolled, or while the mobile menu is open.
+  const solid = !isHome || scrolled || open;
   const linkClass = ({ isActive }, to) =>
     `nav-link block py-2 lg:py-0 ${(to === '/services' ? isServicesActive : isActive) ? 'active' : ''}`;
 
   return (
-    <nav ref={navbarRef} className={`ph-navbar ${scrolled ? 'scrolled' : ''}`}>
+    <nav ref={navbarRef} className={`ph-navbar ${solid ? 'solid' : ''} ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <div className="flex items-center justify-between gap-4">
           <Link to="/" className="navbar-brand shrink-0" onClick={() => setOpen(false)}>
-            <BrandLogo />
+            <BrandLogo light={!solid} />
           </Link>
 
           {/* Desktop: centered nav */}
