@@ -10,7 +10,7 @@ export default function TestimonialsSection() {
         <SectionHeading
           eyebrow="Client Voices"
           title="What our partners say"
-          subtitle="Real experiences from the provider organizations we support across the revenue cycle."
+          subtitle="From the provider organizations we support across the revenue cycle."
         />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (

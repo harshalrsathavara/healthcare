@@ -29,12 +29,12 @@ export default function Services() {
                 <i className="bi bi-clipboard2-pulse" /> Our Services
               </span>
               <h1 className="ph-text-hero__title">
-                Delivering quality health services{' '}
-                <span className="ph-text-hero__accent">to advance patient health</span>
+                Revenue cycle work,{' '}
+                <span className="ph-text-hero__accent">handled properly</span>
               </h1>
               <p className="ph-text-hero__sub">
-                End-to-end revenue cycle, medical billing, HIM, patient access, and healthcare IT —
-                specialized teams that protect revenue and reduce cost-to-collect.
+                Billing, coding, patient access, A/R, and the health IT that keeps it all connected.
+                Staffed by people who have worked provider-side.
               </p>
             </FadeUp>
           </div>
@@ -47,7 +47,7 @@ export default function Services() {
           <SectionHeading
             eyebrow="Flagship Solutions"
             title="Featured Services"
-            subtitle="Our most comprehensive offerings — full-lifecycle billing and the automation and analytics that power a modern revenue cycle."
+            subtitle="Two engagements that cover the most ground: full-lifecycle billing, and the automation layer that takes the repetitive work off your team."
           />
 
           <div className="flex flex-col gap-10">
@@ -121,7 +121,7 @@ export default function Services() {
           <SectionHeading
             eyebrow="What We Offer"
             title="Core Service Lines"
-            subtitle="Specialized teams across the revenue cycle and health IT — engaged individually or as a fully managed partnership."
+            subtitle="Engage any of these on their own, or roll them into one managed arrangement."
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

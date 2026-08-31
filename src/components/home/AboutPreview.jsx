@@ -45,7 +45,7 @@ export default function AboutPreview() {
             <div className="ph-rounded-media ph-img-hover shadow-ph-lg">
               <img
                 src={aboutPreview.image}
-                alt={`Compassionate care at ${siteName}`}
+                alt={`The ${siteName} revenue cycle team at work`}
                 className="w-full object-cover"
                 style={{ height: 520 }}
               />

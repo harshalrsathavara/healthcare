@@ -1,18 +1,19 @@
 export const siteName = 'Fidiviaa';
 
 export const homeBanner = {
-  heading: 'Compassionate Care for a Healthier Tomorrow',
-  subheading: 'Modern medicine, a warm touch, and a team dedicated to your wellbeing at every stage of life.',
-  ctaText: 'Book an Appointment',
+  heading: 'Get Paid for the Care You Already Delivered',
+  subheading:
+    'Fidiviaa runs revenue cycle operations for hospitals, physician groups, and specialty practices. Coding, claims, denials, and the IT underneath all of it.',
+  ctaText: 'Talk to Our Team',
   ctaLink: '/contact-us',
   image: '/images/banners/home-hero.png',
 };
 
 export const aboutPreview = {
   eyebrow: 'About Us',
-  title: 'Trusted Healthcare Partners Since Day One',
+  title: 'We Handle the Part Nobody Went to Medical School For',
   content:
-    'We combine advanced medical expertise with genuine, personal care. Our multidisciplinary team works together to deliver accurate diagnoses, effective treatments, and an experience that puts you first.',
+    'Charge entry, claim scrubbing, the third call to a payer about the same denied account. Our teams take that work off your staff so it stops happening at 7pm. We work inside the EHR and clearinghouse you already run, so nobody has to migrate anything.',
   ctaText: 'Read More',
   ctaLink: '/about-us',
   image: '/images/lib/photo-1584515933487-779824d29309.jpg',
@@ -25,17 +26,17 @@ export const aboutPage = {
   mission: {
     icon: 'bi-bullseye',
     title: 'Our Mission',
-    text: 'To deliver accessible, high-quality healthcare that improves lives, treating every patient with the dignity, compassion, and clinical excellence they deserve.',
+    text: 'Provider organizations lose more revenue to broken process than to bad medicine. We were built to close that gap: work the claims, work the denials, and hand back cash that would otherwise age out.',
   },
   vision: {
     icon: 'bi-eye',
-    title: 'Our Vision',
-    text: "To be the region's most trusted healthcare provider — recognized for clinical excellence, innovation, and genuine patient-centered care.",
+    title: 'Where We Are Headed',
+    text: 'A revenue cycle that runs quietly in the background. No surprise write-offs at month close, no aging report anyone dreads opening.',
   },
   values: {
     icon: 'bi-heart',
-    title: 'Our Core Values',
-    text: 'Integrity, compassion, excellence, and collaboration guide every decision we make and every interaction we have with patients and families.',
+    title: 'How We Work',
+    text: 'We report numbers you can audit against your own system. When a problem is on our side, you hear it from us first. And we do not bill for headcount that is not touching your accounts.',
   },
 };
 
@@ -46,6 +47,8 @@ export const servicesIndexHero = {
 export const serviceDetailFallbackImage =
   '/images/lib/photo-1519494026892-80bbd2d6fd0d.jpg';
 
+// TODO(content): replace with the real office address, phone, email, and hours
+// before launch. These are placeholders and will read as a fake business.
 export const contactPage = {
   heroImage: '/images/lib/photo-1576091160550-2173dba999ef.jpg',
   address: ['123 Wellness Ave, Suite 200', 'Springfield, USA'],
@@ -58,7 +61,7 @@ export const contactPage = {
 
 export const footerContent = {
   description:
-    'Compassionate, modern healthcare focused on you — from routine checkups to specialized treatment, delivered with warmth and expertise.',
+    'Revenue cycle management for hospitals, physician groups, and specialty practices. We work your claims, your denials, and your aging accounts inside the systems you already use.',
   address: '123 Wellness Ave, Suite 200, Springfield',
   phone: '+1 (123) 456-7890',
   phoneHref: '+11234567890',

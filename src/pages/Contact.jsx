@@ -44,7 +44,7 @@ export default function Contact() {
     <>
       <Seo
         title="Contact Us"
-        description="Get in touch with our care team — find our location, hours, and send us a message."
+        description="Get in touch with Fidiviaa about billing, coding, patient access, or RCM automation for your organization."
       />
 
       {/* Text-only page header */}
@@ -59,11 +59,11 @@ export default function Contact() {
                 <i className="bi bi-chat-dots" /> Contact Us
               </span>
               <h1 className="ph-text-hero__title">
-                We're Here to <span className="ph-text-hero__accent">Help</span>
+                Let's Talk About Your <span className="ph-text-hero__accent">Revenue Cycle</span>
               </h1>
               <p className="ph-text-hero__sub">
-                Reach out to our team — we'll help you find the right care or answer any questions
-                about our services.
+                Tell us what is not working: denials, aging A/R, coding backlog, a system nobody
+                supports. We will tell you whether we can help.
               </p>
             </FadeUp>
           </div>

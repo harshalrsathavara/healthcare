@@ -74,7 +74,7 @@ export default function InquiryForm() {
       <h2 className="text-2xl mb-6">Send Us a Message</h2>
 
       {submitted && (
-        <div className="ph-alert-success">Thanks for reaching out! Our care team will get back to you shortly.</div>
+        <div className="ph-alert-success">Got it. Someone from our team will follow up within one business day.</div>
       )}
 
       <form onSubmit={handleSubmit} noValidate>

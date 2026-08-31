@@ -8,8 +8,8 @@ export default function WhyChooseUsSection() {
       <div className="container">
         <SectionHeading
           eyebrow="Why Choose Us"
-          title="Care Built Around You"
-          subtitle="From same-day appointments to a team that listens, here's what sets our clinic apart."
+          title="Why Providers Hand Us This Work"
+          subtitle="No platform to buy, no migration, and metrics you can verify against your own system."
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

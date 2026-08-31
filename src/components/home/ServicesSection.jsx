@@ -85,7 +85,7 @@ export default function ServicesSection() {
         <SectionHeading
           eyebrow="What We Offer"
           title="End-to-End Services"
-          subtitle="From patient access to medical billing, HIM, healthcare IT, and RCM automation — specialized teams that protect revenue and reduce cost-to-collect for provider organizations."
+          subtitle="Six service lines covering the revenue cycle end to end. Take one of them or hand us the whole thing."
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-fr gap-5">

@@ -4,9 +4,9 @@ import { footerContent } from '../../data/siteContent';
 
 export default function CtaBanner({
   eyebrow = 'Get Started',
-  heading = 'Ready to take the next step toward better health?',
-  subheading = 'Our care team is here to help you book an appointment at a time that works for you.',
-  ctaText = 'Contact Us Today',
+  heading = 'Where is your revenue leaking?',
+  subheading = 'Send over a recent aging report or denial summary. We will read it and tell you what we would do first.',
+  ctaText = 'Start a Conversation',
   ctaLink = '/contact-us',
 }) {
   return (

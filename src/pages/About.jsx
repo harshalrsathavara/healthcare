@@ -11,7 +11,7 @@ export default function About() {
     <>
       <Seo
         title="About Us"
-        description="Learn about our mission, vision, and the values that guide the care we provide."
+        description="Who Fidiviaa is, how we work with provider organizations, and what we take off your billing office."
       />
 
       {/* Text-only page header */}
@@ -26,12 +26,12 @@ export default function About() {
                 <i className="bi bi-heart-pulse" /> About Us
               </span>
               <h1 className="ph-text-hero__title">
-                Dedicated to Your Health,{' '}
-                <span className="ph-text-hero__accent">Every Step of the Way</span>
+                The Back Office{' '}
+                <span className="ph-text-hero__accent">Behind Your Front Line</span>
               </h1>
               <p className="ph-text-hero__sub">
-                Compassionate, coordinated care built around every patient we serve — combining
-                clinical expertise with a warm, personal touch.
+                We run revenue cycle operations for hospitals, physician groups, and specialty
+                practices, so your staff can stop working claims after hours.
               </p>
             </FadeUp>
           </div>
@@ -47,17 +47,17 @@ export default function About() {
             </FadeUp>
             <FadeUp delay={0.1}>
               <span className="section-eyebrow">Who We Are</span>
-              <h2 className="section-title">A Team Committed to Whole-Person Care</h2>
+              <h2 className="section-title">Built by People Who Have Worked the Queue</h2>
               <p className="mb-3" style={{ color: 'var(--ph-muted)' }}>
-                {siteName} was founded on a simple belief: healthcare should be accessible, personal, and built on
-                trust. Our physicians, nurses, and support staff work as one team to guide patients through every
-                stage of their health journey, combining modern clinical expertise with the kind of attentive care
-                that makes people feel truly heard.
+                {siteName} started because the same problems kept showing up at every provider organization we
+                worked with. Claims going out with errors that were caught too late. Denials nobody had time to
+                appeal. An aging report that grew every month while everyone stayed busy. The clinical side was
+                fine. The money side was leaking.
               </p>
               <p className="mb-0" style={{ color: 'var(--ph-muted)' }}>
-                Today, we serve thousands of patients across a full range of specialties &mdash; from preventive
-                checkups to advanced treatment &mdash; all under one roof, backed by a philosophy that puts people
-                before procedures.
+                So we built teams to do that work properly: credentialed coders, billing specialists, access
+                staff, and health IT engineers who have spent their careers provider-side. They log into your
+                systems, work your accounts, and report back numbers you can check yourself.
               </p>
             </FadeUp>
           </div>
@@ -92,12 +92,12 @@ export default function About() {
             </FadeUp>
             <FadeUp delay={0.1} className="order-1 lg:order-1">
               <span className="section-eyebrow">Our Philosophy</span>
-              <h2 className="section-title">Medicine That Listens First</h2>
+              <h2 className="section-title">Fewer Surprises at Month Close</h2>
               <p className="mb-0" style={{ color: 'var(--ph-muted)' }}>
-                We believe the best outcomes come from partnership, not prescriptions alone. That means taking the
-                time to understand each patient's story, involving them in every decision, and following up long
-                after the appointment ends. It's a philosophy of care that treats the whole person &mdash; not just
-                the symptom.
+                Most vendors report on the work they did. We would rather report on what it moved: days in A/R,
+                first-pass clean claim rate, denial rate by payer, dollars recovered from underpayments. If a
+                number goes the wrong way, you hear about it from us in that week&rsquo;s call, not from your CFO
+                three months later.
               </p>
             </FadeUp>
           </div>
@@ -117,8 +117,8 @@ export default function About() {
       </section>
 
       {/* <CtaBanner
-        heading="Have questions about our care philosophy?"
-        subheading="We'd love to walk you through how our team can support your health goals."
+        heading="Want to see what your denials actually cost you?"
+        subheading="Send us a recent A/R aging report and we will walk through it with you."
       /> */}
     </>
   );

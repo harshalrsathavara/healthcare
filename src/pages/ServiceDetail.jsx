@@ -93,8 +93,8 @@ export default function ServiceDetail() {
                 {service.servicesProvided.intro}
               </p>
               <p className="mb-0" style={{ color: 'var(--ph-muted)' }}>
-                A dedicated, HIPAA-compliant team owns each step end to end — so nothing slips through
-                the cracks and your in-house staff stays focused on patient care.
+                One named team owns the work, under a signed BAA, with a point of contact who knows
+                your account. Not a rotating pool and not a ticket queue.
               </p>
             </div>
             <Link to="/contact-us" className="btn btn-ph-primary ph-service-link shrink-0">
@@ -127,7 +127,7 @@ export default function ServiceDetail() {
                   ? 'The End-to-End Billing Process'
                   : 'The Automation & Analytics Workflow'
               }
-              subtitle="A connected, transparent process — every step measured, optimized, and built to protect revenue."
+              subtitle="Every step below is measured, and you see the numbers for each one."
             />
             <ProcessFlow steps={flowSteps} />
           </div>

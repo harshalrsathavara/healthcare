@@ -16,9 +16,9 @@ export default function Seo({ title, description, image }) {
   useEffect(() => {
     const fullTitle = title ? `${title} — ${siteName}` : siteName;
     document.title = fullTitle;
-    setMeta('description', description || 'Compassionate, modern healthcare you can trust.');
+    setMeta('description', description || 'Revenue cycle management, medical billing, coding, patient access, and health IT for hospitals and provider organizations.');
     setMeta('og:title', fullTitle, 'property');
-    setMeta('og:description', description || 'Compassionate, modern healthcare you can trust.', 'property');
+    setMeta('og:description', description || 'Revenue cycle management, medical billing, coding, patient access, and health IT for hospitals and provider organizations.', 'property');
     if (image) setMeta('og:image', image, 'property');
   }, [title, description, image]);
 

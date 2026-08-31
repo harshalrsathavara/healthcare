@@ -2,26 +2,26 @@ const whyChooseUs = [
   {
     id: 1,
     icon: 'bi-award',
-    title: 'Board-Certified Physicians',
-    description: 'Our doctors are board-certified specialists with years of hands-on clinical experience.',
+    title: 'Credentialed Coders',
+    description: 'AAPC- and AHIMA-certified coders who work your specialty, not a general queue.',
   },
   {
     id: 2,
     icon: 'bi-clock-history',
-    title: 'Same-Day Appointments',
-    description: 'Get the care you need without long waits, including same-day and urgent slots.',
+    title: 'We Work Your Systems',
+    description: 'No migration, no new platform to buy. Our teams log into the EHR and clearinghouse you already run.',
   },
   {
     id: 3,
     icon: 'bi-heart',
-    title: 'Patient-Centered Care',
-    description: 'We take the time to listen and involve you in every decision about your health.',
+    title: 'Numbers You Can Audit',
+    description: 'Every metric we report can be checked against your own system.',
   },
   {
     id: 4,
     icon: 'bi-shield-check',
-    title: 'Advanced Technology',
-    description: 'Modern diagnostic and treatment equipment for accurate, effective care.',
+    title: 'HIPAA From Day One',
+    description: 'Access control, audit logging, and BAAs handled before the first account is touched.',
   },
 ];
 
