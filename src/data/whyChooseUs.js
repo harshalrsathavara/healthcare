@@ -2,14 +2,15 @@ const whyChooseUs = [
   {
     id: 1,
     icon: 'bi-award',
-    title: 'Credentialed Coders',
-    description: 'AAPC- and AHIMA-certified coders who work your specialty, not a general queue.',
+    title: 'Experienced RCM Professionals',
+    description: 'Our certified coding, billing, and RCM teams bring healthcare revenue cycle expertise across specialties, payers, and complex billing workflows.',
   },
   {
     id: 2,
-    icon: 'bi-clock-history',
-    title: 'We Work Your Systems',
-    description: 'No migration, no new platform to buy. Our teams log into the EHR and clearinghouse you already run.',
+    icon: 'bi-graph-up-arrow',
+    title: 'Higher Clean Claim Rates',
+    // TODO(content): source text was truncated in the brief - confirm final wording.
+    description: 'We focus on accurate coding and front-end claim scrubbing so claims go out right the first time and fewer accounts come back as denials.',
   },
   {
     id: 3,

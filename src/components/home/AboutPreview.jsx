@@ -5,7 +5,7 @@ import stats from '../../data/stats';
 
 const points = [
   { icon: 'bi-shield-check', text: 'HIPAA-compliant, security-first delivery' },
-  { icon: 'bi-people', text: 'Certified coding, billing & clinical teams' },
+  { icon: 'bi-people', text: 'Certified Coding, Billing & RCM Teams' },
   { icon: 'bi-graph-up-arrow', text: 'Automation and analytics that cut cost-to-collect' },
 ];
 

@@ -8,8 +8,8 @@ export default function WhyChooseUsSection() {
       <div className="container">
         <SectionHeading
           eyebrow="Why Choose Us"
-          title="Why Providers Hand Us This Work"
-          subtitle="No platform to buy, no migration, and metrics you can verify against your own system."
+          title="Your Revenue. Our Expertise."
+          subtitle="From accurate billing to faster payments, here's what sets our RCM expertise apart."
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

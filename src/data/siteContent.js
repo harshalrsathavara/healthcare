@@ -1,9 +1,9 @@
 export const siteName = 'Fidiviaa';
 
 export const homeBanner = {
-  heading: 'Get Paid for the Care You Already Delivered',
+  heading: 'Powering Smarter Medical Billing & Revenue Cycle Management',
   subheading:
-    'Fidiviaa runs revenue cycle operations for hospitals, physician groups, and specialty practices. Coding, claims, denials, and the IT underneath all of it.',
+    'Fidiviaa helps healthcare providers streamline medical billing, optimize revenue cycle operations, reduce claim denials, improve accounts receivable performance, and accelerate reimbursement.',
   ctaText: 'Talk to Our Team',
   ctaLink: '/contact-us',
   image: '/images/banners/home-hero.png',
@@ -13,7 +13,7 @@ export const aboutPreview = {
   eyebrow: 'About Us',
   title: 'We Handle the Part Nobody Went to Medical School For',
   content:
-    'Charge entry, claim scrubbing, the third call to a payer about the same denied account. Our teams take that work off your staff so it stops happening at 7pm. We work inside the EHR and clearinghouse you already run, so nobody has to migrate anything.',
+    'We provide comprehensive medical billing and RCM support across claims management, coding, denial management, accounts receivable follow-up, payment posting, patient access, and revenue cycle analytics.',
   ctaText: 'Read More',
   ctaLink: '/about-us',
   image: '/images/lib/photo-1584515933487-779824d29309.jpg',

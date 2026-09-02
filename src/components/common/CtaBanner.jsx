@@ -4,7 +4,7 @@ import { footerContent } from '../../data/siteContent';
 
 export default function CtaBanner({
   eyebrow = 'Get Started',
-  heading = 'Where is your revenue leaking?',
+  heading = 'Ready to Strengthen Your Revenue Cycle?',
   subheading = 'Send over a recent aging report or denial summary. We will read it and tell you what we would do first.',
   ctaText = 'Start a Conversation',
   ctaLink = '/contact-us',
