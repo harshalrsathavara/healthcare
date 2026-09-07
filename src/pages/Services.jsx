@@ -29,8 +29,8 @@ export default function Services() {
                 <i className="bi bi-clipboard2-pulse" /> Our Services
               </span>
               <h1 className="ph-text-hero__title">
-                Revenue cycle work,{' '}
-                <span className="ph-text-hero__accent">handled properly</span>
+                Delivering Smarter Revenue Cycle Solutions{' '}
+                <span className="ph-text-hero__accent">for Healthcare Providers</span>
               </h1>
               <p className="ph-text-hero__sub">
                 Billing, coding, patient access, A/R, and the health IT that keeps it all connected.

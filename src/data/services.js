@@ -43,6 +43,7 @@ const services = [
     servicesProvided: {
       intro:
         'Trained, HIPAA-compliant specialists working inside your scheduling and registration systems. What we cover:',
+      note: 'A dedicated team manages the financial clearance process end to end, helping reduce administrative workload and support efficient revenue cycle operations.',
       bullets: [
         'Insurance eligibility and benefits verification',
         'Prior authorization and referral management',
@@ -119,6 +120,7 @@ const services = [
     },
     servicesProvided: {
       intro: 'Health IT run by engineers who have worked provider-side. The scope:',
+      note: 'A dedicated technology team manages your systems and integrations end to end, helping your in-house team focus on core business and revenue cycle operations.',
       bullets: [
         'EHR and EMR implementation, upgrades, and support',
         'Application management and service desk',
@@ -156,6 +158,7 @@ const services = [
     servicesProvided: {
       intro:
         'Back-end revenue cycle, worked payer-by-payer rather than ticket-by-ticket:',
+      note: 'A dedicated team manages the back-end revenue cycle end to end, helping your in-house team focus on core financial and revenue cycle operations.',
       bullets: [
         'Claims management and submission',
         'A/R management and follow-up',
@@ -232,6 +235,7 @@ const services = [
     },
     servicesProvided: {
       intro: 'Automation and analytics run as a managed layer over the stack you already own. Included:',
+      note: 'A dedicated team manages your automation and analytics workflows, helping your in-house staff focus on core revenue cycle operations.',
       bullets: [
         'Robotic process automation (RPA) for RCM workflows',
         'AI/ML denial prediction and coding assistance',

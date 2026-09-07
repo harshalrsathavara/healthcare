@@ -11,7 +11,15 @@ const layout = [
   { slug: 'medical-billing', variant: 'feature', span: 'lg:col-span-2 lg:row-span-2' },
   { slug: 'rcm-automation-and-analytics', variant: 'wide', span: 'sm:col-span-2 lg:col-span-2' },
   { slug: 'patient-access-services', variant: 'small', span: '' },
-  { slug: 'him-and-clinical-services', variant: 'small', span: '' },
+  {
+    slug: 'him-and-clinical-services',
+    variant: 'small',
+    span: '',
+    // Home-page-only wording; the service page keeps its own title/tagline.
+    title: 'HIM and Coding',
+    tagline:
+      'Medical coding, documentation integrity, chart review, and HIM support to improve accuracy, compliance, and reimbursement.',
+  },
   { slug: 'it-services', variant: 'wide', span: 'sm:col-span-2 lg:col-span-2' },
   { slug: 'patient-financial-services', variant: 'wide', span: 'sm:col-span-2 lg:col-span-2' },
 ];
@@ -90,8 +98,10 @@ export default function ServicesSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-fr gap-5">
           {layout.map((item, i) => {
-            const service = bySlug(item.slug);
-            if (!service) return null;
+            const base = bySlug(item.slug);
+            if (!base) return null;
+            // Home-page overrides (title/tagline) win over the shared service data.
+            const service = { ...base, ...(item.title && { title: item.title }), ...(item.tagline && { tagline: item.tagline }) };
             return (
               <FadeUp key={item.slug} delay={i * 0.06} className={item.span}>
                 {item.variant === 'feature' ? (

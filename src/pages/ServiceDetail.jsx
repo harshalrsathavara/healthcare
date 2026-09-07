@@ -93,8 +93,8 @@ export default function ServiceDetail() {
                 {service.servicesProvided.intro}
               </p>
               <p className="mb-0" style={{ color: 'var(--ph-muted)' }}>
-                One named team owns the work, under a signed BAA, with a point of contact who knows
-                your account. Not a rotating pool and not a ticket queue.
+                {service.servicesProvided.note ||
+                  'One named team owns the work, under a signed BAA, with a point of contact who knows your account. Not a rotating pool and not a ticket queue.'}
               </p>
             </div>
             <Link to="/contact-us" className="btn btn-ph-primary ph-service-link shrink-0">

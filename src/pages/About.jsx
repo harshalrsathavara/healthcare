@@ -23,15 +23,16 @@ export default function About() {
 
             <FadeUp className="relative text-center mx-auto" style={{ maxWidth: 780 }}>
               <span className="ph-pill-eyebrow">
-                <i className="bi bi-heart-pulse" /> About Us
+                <i className="bi bi-buildings" /> About Us
               </span>
               <h1 className="ph-text-hero__title">
-                The Back Office{' '}
-                <span className="ph-text-hero__accent">Behind Your Front Line</span>
+                Dedicated to Better Revenue,{' '}
+                <span className="ph-text-hero__accent">Every Step of the Way</span>
               </h1>
               <p className="ph-text-hero__sub">
-                We run revenue cycle operations for hospitals, physician groups, and specialty
-                practices, so your staff can stop working claims after hours.
+                Integrated, coordinated revenue cycle solutions built around every provider we
+                serve &mdash; combining industry expertise with a reliable, technology-driven
+                approach.
               </p>
             </FadeUp>
           </div>
@@ -43,21 +44,23 @@ export default function About() {
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <FadeUp>
-              <img src={aboutPage.introImage} alt="Our clinic" className="rounded-2xl shadow-ph-lg w-full" />
+              <img src={aboutPage.introImage} alt="Fidiviaa revenue cycle team at work" className="rounded-2xl shadow-ph-lg w-full" />
             </FadeUp>
             <FadeUp delay={0.1}>
               <span className="section-eyebrow">Who We Are</span>
-              <h2 className="section-title">Built by People Who Have Worked the Queue</h2>
+              <h2 className="section-title">A Team Committed to Revenue Cycle Excellence</h2>
               <p className="mb-3" style={{ color: 'var(--ph-muted)' }}>
-                {siteName} started because the same problems kept showing up at every provider organization we
-                worked with. Claims going out with errors that were caught too late. Denials nobody had time to
-                appeal. An aging report that grew every month while everyone stayed busy. The clinical side was
-                fine. The money side was leaking.
+                {siteName} was founded on a simple belief: healthcare organizations deserve reliable,
+                efficient, and transparent revenue cycle support. Our billing, coding, and revenue cycle
+                specialists work as one team to support providers through every stage of the financial
+                journey, combining industry expertise with modern technology and the kind of attentive
+                service that keeps operations running smoothly.
               </p>
               <p className="mb-0" style={{ color: 'var(--ph-muted)' }}>
-                So we built teams to do that work properly: credentialed coders, billing specialists, access
-                staff, and health IT engineers who have spent their careers provider-side. They log into your
-                systems, work your accounts, and report back numbers you can check yourself.
+                Today, we support healthcare organizations across a full range of specialties &mdash; from
+                front-end patient access to claims, denials, and A/R management &mdash; backed by a
+                philosophy that puts financial performance, operational efficiency, and long-term
+                partnership first.
               </p>
             </FadeUp>
           </div>
@@ -92,12 +95,13 @@ export default function About() {
             </FadeUp>
             <FadeUp delay={0.1} className="order-1 lg:order-1">
               <span className="section-eyebrow">Our Philosophy</span>
-              <h2 className="section-title">Fewer Surprises at Month Close</h2>
+              <h2 className="section-title">Revenue Cycle That Works Smarter</h2>
               <p className="mb-0" style={{ color: 'var(--ph-muted)' }}>
-                Most vendors report on the work they did. We would rather report on what it moved: days in A/R,
-                first-pass clean claim rate, denial rate by payer, dollars recovered from underpayments. If a
-                number goes the wrong way, you hear about it from us in that week&rsquo;s call, not from your CFO
-                three months later.
+                We believe the best financial outcomes come from partnership, not processes alone. That means
+                taking the time to understand each organization&rsquo;s revenue cycle, identifying opportunities
+                for improvement, and supporting every stage from patient access through final reimbursement.
+                It&rsquo;s a philosophy of partnership that strengthens the entire revenue cycle &mdash; not just
+                one part of it.
               </p>
             </FadeUp>
           </div>
@@ -107,7 +111,11 @@ export default function About() {
       {/* Why Choose Us */}
       <section className="section-py bg-ph-alt">
         <div className="container">
-          <SectionHeading eyebrow="Why Choose Us" title="What Sets Us Apart" />
+          <SectionHeading
+            eyebrow="Why Choose Us"
+            title="Your Revenue. Our Expertise."
+            subtitle="From accurate billing to faster payments, here's what sets our RCM expertise apart."
+          />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {whyChooseUs.map((item, i) => (
               <WhyChooseCard key={item.id} item={item} delay={i * 0.08} />

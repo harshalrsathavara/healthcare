@@ -26,17 +26,17 @@ export const aboutPage = {
   mission: {
     icon: 'bi-bullseye',
     title: 'Our Mission',
-    text: 'Provider organizations lose more revenue to broken process than to bad medicine. We were built to close that gap: work the claims, work the denials, and hand back cash that would otherwise age out.',
+    text: 'To deliver reliable, efficient revenue cycle solutions that strengthen financial performance, supporting every healthcare organization with accuracy, transparency, and operational excellence.',
   },
   vision: {
     icon: 'bi-eye',
-    title: 'Where We Are Headed',
-    text: 'A revenue cycle that runs quietly in the background. No surprise write-offs at month close, no aging report anyone dreads opening.',
+    title: 'Our Vision',
+    text: 'To be a trusted revenue cycle partner — recognized for billing excellence, innovation, technology-driven solutions, and measurable financial outcomes for healthcare organizations.',
   },
   values: {
-    icon: 'bi-heart',
-    title: 'How We Work',
-    text: 'We report numbers you can audit against your own system. When a problem is on our side, you hear it from us first. And we do not bill for headcount that is not touching your accounts.',
+    icon: 'bi-people',
+    title: 'Our Core Values',
+    text: 'Integrity, accuracy, excellence, and collaboration guide every decision we make and every partnership we build with healthcare organizations and their teams.',
   },
 };
 
@@ -61,7 +61,7 @@ export const contactPage = {
 
 export const footerContent = {
   description:
-    'Revenue cycle management for hospitals, physician groups, and specialty practices. We work your claims, your denials, and your aging accounts inside the systems you already use.',
+    'Fidiviaa delivers medical billing and RCM solutions that streamline claims, reduce denials, and optimize revenue cycle performance.',
   address: '123 Wellness Ave, Suite 200, Springfield',
   phone: '+1 (123) 456-7890',
   phoneHref: '+11234567890',

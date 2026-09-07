@@ -9,20 +9,19 @@ const whyChooseUs = [
     id: 2,
     icon: 'bi-graph-up-arrow',
     title: 'Higher Clean Claim Rates',
-    // TODO(content): source text was truncated in the brief - confirm final wording.
-    description: 'We focus on accurate coding and front-end claim scrubbing so claims go out right the first time and fewer accounts come back as denials.',
+    description: 'We focus on accurate charge capture, coding, claim scrubbing, and submission to help reduce billing errors and prevent avoidable denials.',
   },
   {
     id: 3,
-    icon: 'bi-heart',
-    title: 'Numbers You Can Audit',
-    description: 'Every metric we report can be checked against your own system.',
+    icon: 'bi-arrow-repeat',
+    title: 'Proactive Denial & A/R Management',
+    description: 'Our teams actively work denials, appeals, underpayments, and aging A/R to help recover revenue and accelerate reimbursement.',
   },
   {
     id: 4,
-    icon: 'bi-shield-check',
-    title: 'HIPAA From Day One',
-    description: 'Access control, audit logging, and BAAs handled before the first account is touched.',
+    icon: 'bi-bar-chart-line',
+    title: 'Actionable Revenue Insights',
+    description: 'Transparent reporting and analytics give you visibility into claims, denials, A/R, collections, and key RCM performance indicators.',
   },
 ];
 
