@@ -34,11 +34,6 @@ export default function ServiceDetail() {
               </span>
               <h1 className="ph-text-hero__title">{service.title}</h1>
               <p className="ph-text-hero__sub">{service.tagline}</p>
-              <div className="mt-7">
-                <Link to="/contact-us" className="btn btn-ph-primary btn-lg">
-                  Connect With Us
-                </Link>
-              </div>
             </FadeUp>
           </div>
         </div>

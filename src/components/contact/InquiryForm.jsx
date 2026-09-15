@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MOBILE_RE = /^[0-9+()\-\s]{7,16}$/;
+const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
 const initialValues = { name: '', mobile: '', email: '', subject: '', message: '' };
 
@@ -9,21 +10,21 @@ function validate(values) {
   const errors = {};
 
   if (!values.name.trim()) {
-    errors.name = 'Full name is required.';
+    errors.name = 'Name is required.';
   } else if (values.name.trim().length < 2) {
-    errors.name = 'Please enter your full name.';
+    errors.name = 'Please enter your name.';
   }
 
   if (!values.mobile.trim()) {
-    errors.mobile = 'Mobile number is required.';
+    errors.mobile = 'Contact number is required.';
   } else if (!MOBILE_RE.test(values.mobile.trim())) {
-    errors.mobile = 'Enter a valid mobile number.';
+    errors.mobile = 'Enter a valid contact number.';
   }
 
   if (!values.email.trim()) {
-    errors.email = 'Email address is required.';
+    errors.email = 'Email is required.';
   } else if (!EMAIL_RE.test(values.email.trim())) {
-    errors.email = 'Enter a valid email address.';
+    errors.email = 'Enter a valid email.';
   }
 
   if (!values.message.trim()) {
@@ -40,6 +41,7 @@ export default function InquiryForm() {
   const [errors, setErrors] = useState({});
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -54,16 +56,32 @@ export default function InquiryForm() {
     if (Object.keys(validationErrors).length > 0) return;
 
     setSubmitting(true);
+    setSubmitted(false);
+    setSubmitError('');
     try {
-      // TODO: wire up to the Laravel API, e.g.
-      // await fetch('/api/inquiries', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(values),
-      // });
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      // Web3Forms emails the submission to the address tied to the access key.
+      // `email` becomes the Reply-To, so replying goes straight to the sender.
+      const subject = values.subject.trim();
+      const res = await fetch(WEB3FORMS_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: process.env.REACT_APP_WEB3FORMS_KEY,
+          subject: subject ? `Website inquiry: ${subject}` : 'New website inquiry',
+          from_name: 'Fidiviaa Website',
+          name: values.name.trim(),
+          email: values.email.trim(),
+          phone: values.mobile.trim(),
+          message: values.message.trim(),
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.success) throw new Error(data.message);
+
       setSubmitted(true);
       setValues(initialValues);
+    } catch {
+      setSubmitError('Sorry, your message could not be sent. Please try again, or email us directly.');
     } finally {
       setSubmitting(false);
     }
@@ -77,11 +95,17 @@ export default function InquiryForm() {
         <div className="ph-alert-success">Got it. Someone from our team will follow up within one business day.</div>
       )}
 
+      {submitError && (
+        <div className="ph-alert-error" role="alert">
+          {submitError}
+        </div>
+      )}
+
       <form onSubmit={handleSubmit} noValidate>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="ph-form-label" htmlFor="name">
-              Full Name
+              Name
             </label>
             <input
               id="name"
@@ -97,7 +121,7 @@ export default function InquiryForm() {
 
           <div>
             <label className="ph-form-label" htmlFor="mobile">
-              Mobile Number
+              Contact Number
             </label>
             <input
               id="mobile"
@@ -113,7 +137,7 @@ export default function InquiryForm() {
 
           <div>
             <label className="ph-form-label" htmlFor="email">
-              Email Address
+              Email
             </label>
             <input
               id="email"

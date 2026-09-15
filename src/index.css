@@ -985,6 +985,16 @@ img {
     font-size: 0.9rem;
   }
 
+  .ph-alert-error {
+    background: #fde8e8;
+    color: #9b1c1c;
+    border: 1px solid #f8b4b4;
+    border-radius: 10px;
+    padding: 0.85rem 1.1rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.9rem;
+  }
+
   /* Accordion (service FAQs) ------------------------------------------------ */
   .ph-accordion-item {
     border: 1px solid var(--ph-border);

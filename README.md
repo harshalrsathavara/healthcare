@@ -1,8 +1,8 @@
 # Fidiviaa
 
 Marketing site for **Fidiviaa**, a B2B healthcare services brand — revenue
-cycle management (RCM), medical billing, patient access, HIM & clinical
-services, healthcare IT, and RCM automation & analytics for hospitals and
+cycle management (RCM), medical billing, patient access, HIM & coding,
+healthcare IT, and RCM automation & analytics for hospitals and
 provider organizations.
 
 Built with React 19, Create React App, Tailwind CSS, and GSAP.
@@ -58,7 +58,7 @@ src/
 Content lives in `src/data/services.js` as a flat array with two tiers:
 
 - **Standard** (`type: 'standard'`) — compact category cards, each with a
-  detail page: Patient Access, HIM & Clinical, IT Services, Patient Financial.
+  detail page: Patient Access, HIM & Coding, IT Services, Patient Financial.
 - **Featured** (`type: 'featured'`) — flagship services with a step-by-step
   process diagram: **Medical Billing** and **RCM Automation & Analytics**.
   Their diagrams are defined in the `processFlows` map and rendered by

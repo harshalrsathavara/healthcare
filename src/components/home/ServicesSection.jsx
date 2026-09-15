@@ -15,8 +15,7 @@ const layout = [
     slug: 'him-and-clinical-services',
     variant: 'small',
     span: '',
-    // Home-page-only wording; the service page keeps its own title/tagline.
-    title: 'HIM and Coding',
+    // Home-page-only wording; the service page keeps its own tagline.
     tagline:
       'Medical coding, documentation integrity, chart review, and HIM support to improve accuracy, compliance, and reimbursement.',
   },

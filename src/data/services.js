@@ -1,7 +1,7 @@
 // B2B healthcare service catalog for Fidiviaa.
 //
 // Two service tiers:
-//   - `standard`: compact category cards (Patient Access, HIM & Clinical, IT,
+//   - `standard`: compact category cards (Patient Access, HIM & Coding, IT,
 //     Patient Financial). Each has a detail page in the Overview / Services
 //     Provided format.
 //   - `featured`: larger, flagship services (Medical Billing, RCM Automation &
@@ -56,7 +56,7 @@ const services = [
   {
     id: 2,
     slug: 'him-and-clinical-services',
-    title: 'HIM and Clinical Services',
+    title: 'HIM and Coding',
     type: 'standard',
     icon: 'bi-file-medical',
     tagline: 'Code it right. Defend it later.',
@@ -197,7 +197,7 @@ const services = [
       ],
     },
     servicesProvided: {
-      intro: 'The complete billing lifecycle, or whichever parts of it you want to hand off:',
+      intro: 'The complete billing lifecycle, or whichever parts of it you want to hand off',
       bullets: [
         'Charge capture and entry',
         'Medical coding and claim scrubbing',
