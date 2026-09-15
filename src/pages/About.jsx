@@ -2,7 +2,6 @@ import Seo from '../components/common/Seo';
 import FadeUp from '../components/common/FadeUp';
 import SectionHeading from '../components/common/SectionHeading';
 import WhyChooseCard from '../components/whyChooseUs/WhyChooseCard';
-import CtaBanner from '../components/common/CtaBanner';
 import whyChooseUs from '../data/whyChooseUs';
 import { aboutPage, siteName } from '../data/siteContent';
 

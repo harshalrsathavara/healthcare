@@ -1,7 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import gsap from 'gsap';
-import stats from '../../data/stats';
 
 export default function Hero({ heading, subheading, ctaText, ctaLink, image }) {
   const parallaxRef = useRef(null);

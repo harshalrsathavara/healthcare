@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import FadeUp from '../common/FadeUp';
 import { aboutPreview, siteName } from '../../data/siteContent';
 import stats from '../../data/stats';
