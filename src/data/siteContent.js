@@ -47,24 +47,25 @@ export const servicesIndexHero = {
 export const serviceDetailFallbackImage =
   '/images/lib/photo-1519494026892-80bbd2d6fd0d.jpg';
 
-// TODO(content): replace with the real office address, phone, email, and hours
-// before launch. These are placeholders and will read as a fake business.
+// TODO(content): replace with the real office hours before launch.
+// These are placeholders and will read as a fake business.
 export const contactPage = {
   heroImage: '/images/lib/photo-1576091160550-2173dba999ef.jpg',
-  address: ['123 Wellness Ave, Suite 200', 'Springfield, USA'],
-  phone: '+1 (123) 456-7890',
-  phoneHref: '+11234567890',
-  email: 'care@fidiviaa.com',
+  address: ['5900 Balcones Drive Ste 100', 'Austin, TX 78731, USA'],
+  phone: '+1 737 787 9923',
+  phoneHref: '+17377879923',
+  email: 'Info@fidiviaa.com',
   hours: ['Mon – Sat: 8:00 AM – 8:00 PM', 'Sunday: Emergency Only'],
-  mapEmbedSrc: 'https://www.google.com/maps?q=Springfield,USA&output=embed',
+  mapEmbedSrc:
+    'https://www.google.com/maps?q=5900+Balcones+Drive+Ste+100,+Austin,+TX+78731&output=embed',
 };
 
 export const footerContent = {
   description:
     'Fidiviaa delivers medical billing and RCM solutions that streamline claims, reduce denials, and optimize revenue cycle performance.',
-  address: '123 Wellness Ave, Suite 200, Springfield',
-  phone: '+1 (123) 456-7890',
-  phoneHref: '+11234567890',
-  email: 'care@fidiviaa.com',
+  address: '5900 Balcones Drive Ste 100, Austin, TX 78731, USA',
+  phone: '+1 737 787 9923',
+  phoneHref: '+17377879923',
+  email: 'Info@fidiviaa.com',
   hours: 'Mon – Sat: 8:00 AM – 8:00 PM',
 };

@@ -23,7 +23,7 @@ const services = [
     tagline: 'Catch the coverage problem before the patient is in the chair.',
     cardImage: IMG('1576091160399-112ba8d25d1d'),
     bannerImage: IMG('1538108149393-fbbd81895907'),
-    overviewImage: IMG('1516549655169-df83a0774514'),
+    overviewImage: '/images/services/patient-access-overview.jpg',
     provideImage: IMG('1516549655169-df83a0774514'),
     overview: {
       // TODO(content): swap the bracketed figure for your own denial-source
@@ -62,7 +62,7 @@ const services = [
     tagline: 'Code it right. Defend it later.',
     cardImage: IMG('1584432810601-6c7f27d2362b'),
     bannerImage: IMG('1519494026892-80bbd2d6fd0d'),
-    overviewImage: IMG('1584432810601-6c7f27d2362b'),
+    overviewImage: '/images/services/him-coding-overview.jpg',
     provideImage: IMG('1504813184591-01572f98c85f'),
     overview: {
       paragraphs: [
@@ -140,7 +140,7 @@ const services = [
     tagline: 'Aged A/R and the denials your billing office never has time to reach.',
     cardImage: IMG('1554224155-6726b3ff858f'),
     bannerImage: IMG('1576091160550-2173dba999ef'),
-    overviewImage: IMG('1551076805-e1869033e561'),
+    overviewImage: '/images/services/patient-financial-overview.jpg',
     provideImage: IMG('1554224155-6726b3ff858f'),
     overview: {
       paragraphs: [
